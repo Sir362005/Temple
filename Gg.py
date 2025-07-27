@@ -1,11 +1,9 @@
 import streamlit as st
 import requests
 
-# --------------------------
-# ✅ Define function first
-# --------------------------
-def (call_gemini_api(...))
-    url = "https://generativelanguage.googleapis.com/v1beta/models/gemini-pro:generateContent"
+# ✅ 1. Paste this Gemini API function FIRST (very top)
+def call_gemini_api(prompt, api_key):
+    url = "https://generativelanguage.googleapis.com/v1/models/gemini-pro:generateContent"
     headers = {"Content-Type": "application/json"}
     params = {"key": api_key}
     data = {
@@ -21,10 +19,8 @@ def (call_gemini_api(...))
     else:
         return f"❌ Error from Gemini API: {response.text}"
 
-# --------------------------
-# ✅ App starts here
-# --------------------------
-st.set_page_config(page_title="Chatbot", layout="centered")
+# ✅ 2. Then the rest of your app code
+st.set_page_config(page_title="Multi-Model Chatbot", layout="centered")
 st.title("🤖 Multi-Model Chatbot")
 
 MODEL_OPTIONS = {
