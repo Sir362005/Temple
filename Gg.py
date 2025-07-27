@@ -4,7 +4,7 @@ import requests
 # --------------------------
 # ✅ Define function first
 # --------------------------
-def call_gemini_api(prompt, api_key):
+def (call_gemini_api(...))
     url = "https://generativelanguage.googleapis.com/v1beta/models/gemini-pro:generateContent"
     headers = {"Content-Type": "application/json"}
     params = {"key": api_key}
